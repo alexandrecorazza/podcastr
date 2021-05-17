@@ -87,6 +87,7 @@ Este projeto foi idealizado e desenvolvido pela [Rocketseat](https://rocketseat.
 
 - [ ] Dark theme
 - [ ] Aplicação responsiva
+- [ ] Paginação para os podcasts disponíveis
 
 ## :memo: Licença
 
