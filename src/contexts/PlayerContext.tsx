@@ -27,7 +27,7 @@ type PlayerContextData = {
   toggleShuffle: () => void
 }
 
-export const PlayerContext = createContext({} as PlayerContextData)  // Dentro do createContext passamos formato dos dados que o contexto vai iniciar
+export const PlayerContext = createContext({} as PlayerContextData)  // Dentro do createContext passamos formato dos dados que o contexto vai iniciar. Por exemplo, export const PlayerContext = createContext('') iniciamos um contexto do tipo string.
 
 type PlayerContextProviderProps = {
   children: ReactNode

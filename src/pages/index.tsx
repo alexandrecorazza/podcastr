@@ -123,7 +123,9 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
 export const getStaticProps: GetStaticProps = async () => {
 
   const { data } = await api('episodes', {
-    //com o json-server é possível passarmos parâmetros. Queremos 12 registros(_limit=12), ordernar pelo publisher_at(_sort=published_at) e na ordem decrescente(_order=desc)
+    // Queremos 12 registros(_limit=12), ordernar pelo publisher_at(_sort=published_at) e na ordem decrescente(_order=desc)
+    // O axios nos permite passar os parâmetros como objeto dentro desse 'params'. Uma chamada api equivalente a essa seria:
+    // const { data } = await api('episodes&_limit=12&_sort=published_at&_order=desc')
     params: {
       _limit: 12,
       _sort: 'published_at',
