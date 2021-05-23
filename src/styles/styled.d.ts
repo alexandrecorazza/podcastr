@@ -4,8 +4,13 @@ declare module 'styled-components' {
     export interface DefaultTheme {
         colors: {
             background: string,
-            headerAndLastRelease: string,
-            text: string
+            header: string,
+            lines: string,
+            textDefault: string,
+            textAlternative: string,
+            columnName: string,
+            textEpisodes: string,
+            buttonBorder: string
         }
     }
 }

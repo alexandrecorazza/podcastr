@@ -19,8 +19,8 @@
     gap: 1.5rem;
 
     li {
-      background: var(--white);
-      border: 1px solid var(--gray-100);
+      background: var(--header);
+      border: 1px solid var(--lines);
       padding: 1.25rem;
       border-radius: 1.5rem;
       position: relative;
@@ -40,7 +40,7 @@
 
         a {
           display: block;
-          color: var(--gray-800);
+          color: var(--textDefault);
           font-family: Lexed, sans-serif;
           font-weight: 600;
           text-decoration: none;
@@ -92,8 +92,8 @@
 
         width: 2.5rem;
         height: 2.5rem;
-        background: var(--white);
-        border: 1px solid var(--gray-100);
+        background: var(--background);
+        border: 1px solid var(--buttonBorder);
         border-radius: 0.675rem;
         font-size: 0;
 
@@ -120,11 +120,11 @@
 
     th, td {
       padding: 0.75rem 1rem;
-      border-bottom: 1px solid var(--gray-100);
+      border-bottom: 1px solid var(--lines);
     }
 
     th {
-      color: var(--gray-200);
+      color: var(--columnName);
       text-transform: uppercase;
       font: 500 0.75rem Lexend, sans-serif;
       text-align: left;
@@ -140,7 +140,7 @@
       }
 
       a {
-        color: var(--gray-800);
+        color: var(--textDefault);
         font-family: Lexend, sans-serif;
         font-weight: 600;
         text-decoration: none;
@@ -155,8 +155,8 @@
       button {
         width: 2rem;
         height: 2rem;
-        background: var(--white);
-        border: 1px solid var(--gray-100);
+        background: var(--background);
+        border: 2px solid var(--buttonBorder);
         border-radius: 0.5rem;
         font-size: 0;
 

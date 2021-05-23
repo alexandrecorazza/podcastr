@@ -1,5 +1,5 @@
 .headerContainer {
-    background: var(--white);
+    background: var(--header);
     height: 6.5rem;
 
     display: flex;
@@ -7,7 +7,7 @@
 
     padding: 2rem 4rem;
 
-    border-bottom: 1px solid var(--gray-100);
+    border-bottom: 1px solid var(--lines);
 
     p {
         margin-left: 2rem;
@@ -20,4 +20,8 @@
         text-transform: capitalize; //deixa a primeira letra de cada palavra em maiúsculo
     }
 
+}
+
+.switch {
+    margin-left: auto;
 }

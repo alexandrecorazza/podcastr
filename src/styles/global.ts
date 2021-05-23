@@ -10,6 +10,13 @@ export default createGlobalStyle`
   :root {
     --white: #FFF;
     --background: ${props => props.theme.colors.background};
+    --header : ${props => props.theme.colors.header};
+    --lines: ${props => props.theme.colors.lines};
+    --textDefault: ${props => props.theme.colors.textDefault};
+    --textAlternative: ${props => props.theme.colors.textAlternative};
+    --textEpisodes: ${props => props.theme.colors.textEpisodes};
+    --columnName: ${props => props.theme.colors.columnName};
+    --buttonBorder: ${props => props.theme.colors.buttonBorder};
 
     --gray-50: #F7F8FA;
     --gray-100: #E6E8EB;
@@ -53,13 +60,13 @@ export default createGlobalStyle`
 
   body, input, textarea, button {
     font: 500 1rem Inter, sans-serif;
-    color: var(--gray-500);
+    color: var(--textAlternative);
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     font-family: Lexend, sans-serif;
-    color: var(--gray-800 );
+    color: var(--textDefault);
   }
 
   h1 {
