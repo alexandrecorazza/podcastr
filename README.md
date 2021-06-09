@@ -85,7 +85,7 @@ Este projeto foi idealizado e desenvolvido pela [Rocketseat](https://rocketseat.
 
 ## :pushpin: To-Do
 
-- [ ] Dark theme
+- [x] Dark theme
 - [ ] Aplicação responsiva
 - [ ] Paginação para os podcasts disponíveis
 
