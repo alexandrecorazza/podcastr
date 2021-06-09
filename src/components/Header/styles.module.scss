@@ -9,6 +9,14 @@
 
     border-bottom: 1px solid var(--lines);
 
+    @media(max-width: 780px) {
+        padding: 2rem 1rem;
+
+        img {
+            width: 150px;
+        }
+    }
+
     p {
         margin-left: 2rem;
         padding: 0.25rem 0 0.25rem 2rem;

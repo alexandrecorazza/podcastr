@@ -1,6 +1,8 @@
 .wrapper {
-    display: flex;
-
+    @media(min-width: 1080px) {
+        display: flex;
+    }
+    
     main {
         flex: 1;    //queremos que ocupe o máximo de espaço possível.
     }

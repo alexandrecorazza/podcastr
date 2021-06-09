@@ -11,6 +11,7 @@ export function Player() {
   //Todos os elementos do html estão disponíveis de forma global no typescript
   const audioRef = useRef<HTMLAudioElement >(null)
   const[progress, setProgress] = useState(0)
+  const[showPlayer, setShowPlayer] = useState(false)
 
   const {
     episodeList,
@@ -64,7 +65,12 @@ export function Player() {
   const episode = episodeList[currentEpisodeIndex]
 
   return (
-    <div className={styles.playerContainer}>
+    <div className={ showPlayer ? `${styles.playerContainer} ${styles.active}` : styles.playerContainer}>
+      <button className={styles.showPlayerButton} onClick={() => {setShowPlayer(!showPlayer)}}>
+        {!showPlayer &&
+          <img src="/playing.svg" alt=" Tocando agora"/>
+        }
+      </button>
       <header>
         <img src="/playing.svg" alt=" Tocando agora"/>
         <strong>Tocando agora</strong>

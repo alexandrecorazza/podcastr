@@ -9,6 +9,7 @@ import { convertDurationToTimeString } from '../utils/convertDurationToTimeStrin
 
 import styles from './home.module.scss'
 import { usePlayer } from '../contexts/PlayerContext'
+import { useState } from 'react'
 
 type Episode = {
   id: string,
@@ -28,8 +29,9 @@ type HomeProps = {
 
 export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
  
- const { playList } = usePlayer()
+ const { playList, isPlaying, togglePlay } = usePlayer()
  const episodeList = [...latestEpisodes, ...allEpisodes]
+ const [playEpisodeId, setPlayEpisodeId] = useState('')
 
   return (
     <div className={styles.homepage}>
@@ -61,8 +63,22 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                   <span>{episode.durationAsString}</span>
                 </div>
 
-                <button type="button" onClick={() => playList(episodeList, index)}>
-                  <img src="/play-green.svg" alt="Tocar episódio" />
+                <button type="button" onClick={() => {
+
+                  if(isPlaying && episode.id == playEpisodeId){
+                    togglePlay()
+                  }
+                  else {
+                    playList(episodeList, index);
+                    setPlayEpisodeId(episode.id);
+                  }
+                  
+                  }}>
+                  {isPlaying && episode.id == playEpisodeId ?
+                    <img src="/pause-green.svg" alt="Pausar episódio" />
+                    :
+                    <img src="/play-green.svg" alt="Tocar episódio" />
+                  }
                 </button>
               </li>
             )
@@ -105,8 +121,22 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                   <td style={{ width: 100 }}>{episode.publishedAt}</td>
                   <td>{episode.durationAsString}</td>
                   <td>
-                    <button type="button" onClick={() => playList(episodeList, index + latestEpisodes.length)}>
-                      <img src="play-green.svg" alt="Tocar episódio" />
+                    <button type="button" onClick={() => {
+                      
+                      if(isPlaying && episode.id == playEpisodeId){
+                        togglePlay()
+                      }
+                      else {
+                        playList(episodeList, index + latestEpisodes.length);
+                        setPlayEpisodeId(episode.id);
+                      }
+                      
+                      }}>
+                      {isPlaying && episode.id == playEpisodeId ?
+                        <img src="/pause-green.svg" alt="Pausar episódio" />
+                        :
+                        <img src="/play-green.svg" alt="Tocar episódio" />
+                      }
                     </button>
                   </td>
                 </tr>
