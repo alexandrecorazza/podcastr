@@ -86,8 +86,8 @@ Este projeto foi idealizado e desenvolvido pela [Rocketseat](https://rocketseat.
 ## :pushpin: To-Do
 
 - [x] Dark theme
-- [ ] Aplicação responsiva
-- [ ] Paginação para os podcasts disponíveis
+- [x] Aplicação responsiva
+- [x] Botão pause nos últimos lançamentos e todos episódios
 
 ## :memo: Licença
 
