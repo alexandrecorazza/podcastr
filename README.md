@@ -87,7 +87,7 @@ Este projeto foi idealizado e desenvolvido pela [Rocketseat](https://rocketseat.
 
 - [x] Dark theme
 - [x] Aplicação responsiva
-- [x] Botão pause nos últimos lançamentos e todos episódios
+- [x] Botão pause nos episódios (antes disponível apenas no player)
 
 ## :memo: Licença
 
